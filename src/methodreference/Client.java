@@ -27,13 +27,14 @@ public class Client {
 		manager.processPromotion(employee, Client::checkEmployeeEligibility);
 
 		
-		//using method reference - non static method + class reference
+		//using method reference - non static method + object reference
 		manager.processPromotion(employee, manager::isExperiencedJavaProgrammer);
 
 		//using method reference - non static method + class reference 
 		manager.processPromotion(employee, Employee::isExperiencedJavaProgrammer);
 		
 		
+		//constructor reference
 		Employee employeeNew = manager.createEmployee("Roy","Java, Angular", 8, Employee::new);
 		
 		System.out.println(employeeNew);
